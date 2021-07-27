@@ -19,7 +19,6 @@ class WelcomeViewController: UIViewController {
     private let firstColor: UIColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
     private let secondColor: UIColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
     
-    
 //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()

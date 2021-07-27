@@ -52,10 +52,6 @@ class LoginViewController: UIViewController {
         }
         performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
-    
-    
-//MARK: - Private Methods
-    
 }
 
 //MARK: - Extensions
