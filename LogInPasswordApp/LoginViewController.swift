@@ -23,7 +23,6 @@ class LoginViewController: UIViewController {
         
         userNameTextField.delegate = self
         passwordTextField.delegate = self
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -38,16 +37,26 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction private func forgotUserName() {
-        showAlert(with: "Oops!", and:  "Your name is User! 😉")
+        showAlert(
+            with: "Oops!",
+            and:  "Your name is User! 😉"
+        )
     }
     
     @IBAction private func forgotPassword() {
-        showAlert(with: "Oops!", and:  "Your password is Password! 😉")
+        showAlert(
+            with: "Oops!",
+            and:  "Your password is Password! 😉"
+        )
     }
     
     @IBAction func logInButtonPressed() {
         if userNameTextField.text != user || passwordTextField.text != password {
-            showAlert(with: "Invalid login or password", and: "Please, enter correct login and password", textField: passwordTextField)
+            showAlert(
+                with: "Invalid login or password",
+                and: "Please, enter correct login and password",
+                textField: passwordTextField
+            )
             return
         }
         performSegue(withIdentifier: "showWelcomeVC", sender: nil)
@@ -58,7 +67,10 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     private func showAlert(with title: String, and message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAlert = UIAlertAction(title: "OK", style: .default) { _ in
+        let okAlert = UIAlertAction(
+            title: "OK",
+            style: .default
+        ) { _ in
             textField?.text = nil
         }
         alert.addAction(okAlert)
