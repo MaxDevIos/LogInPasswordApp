@@ -13,9 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-//MARK: - Private Properties
-    private let user = "User"
-    private let password = "Password"
+//MARK: - Public Properties
+    var user: User!
     
 //MARK: - Override methods
     override func viewDidLoad() {
@@ -23,11 +22,27 @@ class LoginViewController: UIViewController {
         
         userNameTextField.delegate = self
         passwordTextField.delegate = self
+        user = User.getUserData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let user = segue.destination as? WelcomeViewController
-        user?.userName = self.user
+        let tabBarController = segue.destination as? UITabBarController
+        
+        if let viewControllers = tabBarController?.viewControllers {
+            for viewController in viewControllers {
+                if let navigationVC = viewController as? UINavigationController {
+                    if let studyVC = navigationVC.topViewController as? StudyViewController {
+                        studyVC.user = user
+                    }
+                } else if let sportVC = viewController as? SportViewController {
+                    sportVC.user = user
+                } else if let jobVC = viewController as? JobViewController {
+                    jobVC.user = user
+                } else if let hobbyVC = viewController as? HobbyViewController {
+                    hobbyVC.user = user
+                }
+            }
+        }
     }
 
 //MARK: - IB Actions
@@ -39,19 +54,19 @@ class LoginViewController: UIViewController {
     @IBAction private func forgotUserName() {
         showAlert(
             with: "Oops!",
-            and:  "Your name is User! 😉"
+            and:  "Your name is \(user.userName)! 😉"
         )
     }
     
     @IBAction private func forgotPassword() {
         showAlert(
             with: "Oops!",
-            and:  "Your password is Password! 😉"
+            and:  "Your password is \(user.password)! 😉"
         )
     }
     
     @IBAction func logInButtonPressed() {
-        if userNameTextField.text != user || passwordTextField.text != password {
+        if userNameTextField.text != user.userName || passwordTextField.text != user.password {
             showAlert(
                 with: "Invalid login or password",
                 and: "Please, enter correct login and password",

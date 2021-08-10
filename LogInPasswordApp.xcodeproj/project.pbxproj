@@ -14,6 +14,12 @@
 		000AD16726B0560900D7546C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000AD16626B0560900D7546C /* Assets.xcassets */; };
 		000AD16A26B0560900D7546C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000AD16826B0560900D7546C /* LaunchScreen.storyboard */; };
 		000AD17226B08EC200D7546C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000AD17126B08EC200D7546C /* WelcomeViewController.swift */; };
+		00C076B226C192660043A0C7 /* SportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C076B126C192660043A0C7 /* SportViewController.swift */; };
+		00C076B426C1927B0043A0C7 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C076B326C1927A0043A0C7 /* JobViewController.swift */; };
+		00C076B626C193B10043A0C7 /* HobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C076B526C193B10043A0C7 /* HobbyViewController.swift */; };
+		00D1EB9026BAD8F70035831E /* WelcomeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D1EB8F26BAD8F70035831E /* WelcomeUser.swift */; };
+		00D1EB9226BAF80E0035831E /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D1EB9126BAF80E0035831E /* StudyViewController.swift */; };
+		00D1EB9426BB235F0035831E /* StudyResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D1EB9326BB235F0035831E /* StudyResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		000AD16926B0560900D7546C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		000AD16B26B0560900D7546C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		000AD17126B08EC200D7546C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		00C076B126C192660043A0C7 /* SportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportViewController.swift; sourceTree = "<group>"; };
+		00C076B326C1927A0043A0C7 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
+		00C076B526C193B10043A0C7 /* HobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyViewController.swift; sourceTree = "<group>"; };
+		00D1EB8F26BAD8F70035831E /* WelcomeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeUser.swift; sourceTree = "<group>"; };
+		00D1EB9126BAF80E0035831E /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
+		00D1EB9326BB235F0035831E /* StudyResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +70,62 @@
 		000AD15C26B0560600D7546C /* LogInPasswordApp */ = {
 			isa = PBXGroup;
 			children = (
-				000AD15D26B0560600D7546C /* AppDelegate.swift */,
-				000AD15F26B0560600D7546C /* SceneDelegate.swift */,
-				000AD16126B0560600D7546C /* LoginViewController.swift */,
-				000AD17126B08EC200D7546C /* WelcomeViewController.swift */,
-				000AD16326B0560600D7546C /* Main.storyboard */,
-				000AD16626B0560900D7546C /* Assets.xcassets */,
-				000AD16826B0560900D7546C /* LaunchScreen.storyboard */,
-				000AD16B26B0560900D7546C /* Info.plist */,
+				00D1EB8A26BA94410035831E /* ViewControllers */,
+				00D1EB8E26BA95F70035831E /* Models */,
+				00D1EB8B26BA94610035831E /* Storyboards */,
+				00D1EB8C26BA94A20035831E /* SupportingFiles */,
+				00D1EB8D26BA94C70035831E /* Resources */,
 			);
 			path = LogInPasswordApp;
+			sourceTree = "<group>";
+		};
+		00D1EB8A26BA94410035831E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				000AD16126B0560600D7546C /* LoginViewController.swift */,
+				000AD17126B08EC200D7546C /* WelcomeViewController.swift */,
+				00D1EB9126BAF80E0035831E /* StudyViewController.swift */,
+				00C076B126C192660043A0C7 /* SportViewController.swift */,
+				00C076B326C1927A0043A0C7 /* JobViewController.swift */,
+				00C076B526C193B10043A0C7 /* HobbyViewController.swift */,
+				00D1EB9326BB235F0035831E /* StudyResultViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		00D1EB8B26BA94610035831E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				000AD16326B0560600D7546C /* Main.storyboard */,
+				000AD16826B0560900D7546C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		00D1EB8C26BA94A20035831E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				000AD15D26B0560600D7546C /* AppDelegate.swift */,
+				000AD15F26B0560600D7546C /* SceneDelegate.swift */,
+				000AD16B26B0560900D7546C /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		00D1EB8D26BA94C70035831E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				000AD16626B0560900D7546C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		00D1EB8E26BA95F70035831E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00D1EB8F26BAD8F70035831E /* WelcomeUser.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +200,13 @@
 			files = (
 				000AD16226B0560600D7546C /* LoginViewController.swift in Sources */,
 				000AD17226B08EC200D7546C /* WelcomeViewController.swift in Sources */,
+				00C076B426C1927B0043A0C7 /* JobViewController.swift in Sources */,
+				00D1EB9426BB235F0035831E /* StudyResultViewController.swift in Sources */,
+				00C076B226C192660043A0C7 /* SportViewController.swift in Sources */,
+				00D1EB9026BAD8F70035831E /* WelcomeUser.swift in Sources */,
 				000AD15E26B0560600D7546C /* AppDelegate.swift in Sources */,
+				00C076B626C193B10043A0C7 /* HobbyViewController.swift in Sources */,
+				00D1EB9226BAF80E0035831E /* StudyViewController.swift in Sources */,
 				000AD16026B0560600D7546C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,8 +356,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A426P5VA2L;
-				INFOPLIST_FILE = LogInPasswordApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_FILE = LogInPasswordApp/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,8 +376,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A426P5VA2L;
-				INFOPLIST_FILE = LogInPasswordApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				INFOPLIST_FILE = LogInPasswordApp/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -13,7 +13,8 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var userNameLabel: UILabel!
     
 //MARK: - Public Properties
-    var userName = ""
+    var user: User!
+    
     
 //MARK: - Private Properties
     private let firstColor: UIColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
@@ -23,8 +24,12 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.addVertualCradientLayer(topColor: firstColor, bottomColor: secondColor)
-        userNameLabel.text = "Welcome, \(userName)!"
+        view.addVertualCradientLayer(
+            topColor: firstColor,
+            bottomColor: secondColor
+        )
+        user = User.getUserData()
+        userNameLabel.text = "Welcome, \(user.person.fullName)!"
     }
 }
 
